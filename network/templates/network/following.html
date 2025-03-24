@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Posts from Users You Follow</h2>
+                {% if page_obj %}
+                    {% include "network/posts.html" %}
+                {% else %}
+                    <div class="alert alert-info">
+                        You're not following anyone yet or the users you follow haven't posted anything.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

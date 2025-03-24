@@ -1,0 +1,37 @@
+/* Basic styling for the social network */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.post {
+    transition: all 0.2s ease;
+}
+
+.post:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.like-button {
+    transition: all 0.2s ease;
+}
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+.edit-area {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}

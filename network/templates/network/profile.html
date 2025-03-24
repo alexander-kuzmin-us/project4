@@ -1,0 +1,39 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ profile_user.username }}</h2>
+                        <p class="card-text">
+                            <strong>Followers:</strong> {{ followers_count }} · 
+                            <strong>Following:</strong> {{ following_count }}
+                        </p>
+                        
+                        {% if user.is_authenticated and user != profile_user %}
+                            <form method="post" action="{% url 'profile' profile_user.username %}">
+                                {% csrf_token %}
+                                {% if is_following %}
+                                    <input type="hidden" name="action" value="unfollow">
+                                    <button type="submit" class="btn btn-outline-primary">Unfollow</button>
+                                {% else %}
+                                    <input type="hidden" name="action" value="follow">
+                                    <button type="submit" class="btn btn-primary">Follow</button>
+                                {% endif %}
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Posts</h3>
+                {% include "network/posts.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
