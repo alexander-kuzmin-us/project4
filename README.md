@@ -140,7 +140,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Contributors
 
-- [Alex Kyzmin](https://github.com/alexander-kuzmin-us)
+- [Alex Kuzmin](https://github.com/alexander-kuzmin-us)
 
 ---
 
