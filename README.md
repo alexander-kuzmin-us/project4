@@ -1,5 +1,3 @@
-I'll create a comprehensive, SEO-friendly README.md file for your social network project:
-
 # Threads-like Social Network
 
 A responsive, Django-based social networking application with features similar to Threads/Twitter. This web application allows users to create accounts, make posts, follow other users, and engage with content through likes and comments.
